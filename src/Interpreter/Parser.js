@@ -40,7 +40,7 @@ export default class Parser
             this.currentToken = this.lexer.getNextToken();
         } else
         {
-            throw new Error("Invalid syntax - Unexpected Token");
+            throw new Error(`Invalid syntax - Unexpected Token\nExpected: ${expectedType}\nReceived: ${this.currentToken.type}`);
         }
     }
 

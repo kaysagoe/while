@@ -292,7 +292,6 @@ export default class Interpreter
     interpret()
     {
         let tree = this.parser.parse();
-        console.log(tree);
         this.visit(tree);
         if (this.smallStep)
         {
